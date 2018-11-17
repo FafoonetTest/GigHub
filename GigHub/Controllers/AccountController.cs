@@ -7,9 +7,6 @@ using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
 
-//mf.flores@free.fr
-//Abcd1!
-
 namespace GigHub.Controllers
 {
     [Authorize]
