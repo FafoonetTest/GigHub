@@ -20,3 +20,11 @@ LocalDB instance "MSSQLLocalDB" created with version 13.0.1601.5.
  
 C:\>sqllocaldb start MSSQLLocalDB
 LocalDB instance "MSSQLLocalDB" started.
+
+VALIDATION COTE SERVEUR
+
+ajouté à la fin du fichier de la vue .cshtml qui contient le formulaire
+@section scripts
+{
+    @Scripts.Render("~/bundles/jqueryval")
+}
