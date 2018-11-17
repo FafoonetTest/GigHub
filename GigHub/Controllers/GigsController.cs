@@ -14,8 +14,21 @@ namespace GigHub.Controllers
                 _context = new ApplicationDbContext();
         }
         
+        [Authorize]
         public ActionResult Create()
         {
+            var viewModel = new GigFormViewModel
+            {
+                Genres = _context.Genres.ToList()
+            };
+            return View(viewModel);
+        }
+
+        [Authorize]
+        [HttpPost]
+        public ActionResult Create(GigFormViewModel viewModel)
+        {
+            //var artist = _context.Users.Single(x => x.Id == User.Identity.GetUserId());
             var viewModel = new GigFormViewModel
             {
                 Genres = _context.Genres.ToList()
