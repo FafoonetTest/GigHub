@@ -40,3 +40,7 @@ POLICES
         fonts.com
         fontsquirrel.com
         typekit.com
+EXTENSIONS
+    Productivity power tools 2017
+    web essentials
+    zencoding
