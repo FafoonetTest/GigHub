@@ -350,3 +350,4 @@ D:\PersoExterne\repo\GigHub\GigHub\obj\Debug\GigHub.dll
 D:\PersoExterne\repo\GigHub\GigHub\obj\Debug\GigHub.pdb
 F:\Projets visual studio\Git\GigHub\GigHub\obj\Debug\GigHub.Migrations.AddForeignKeyPropertiesToGog.resources
 F:\Projets visual studio\Git\GigHub\GigHub\obj\Debug\GigHub.csprojAssemblyReference.cache
+F:\Projets visual studio\Git\GigHub\GigHub\obj\Debug\GigHub.Migrations.AddNameToApplicationUser.resources
