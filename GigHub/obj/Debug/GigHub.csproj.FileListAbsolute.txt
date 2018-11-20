@@ -349,5 +349,13 @@ D:\PersoExterne\repo\GigHub\GigHub\obj\Debug\GigHub.csproj.CopyComplete
 D:\PersoExterne\repo\GigHub\GigHub\obj\Debug\GigHub.dll
 D:\PersoExterne\repo\GigHub\GigHub\obj\Debug\GigHub.pdb
 F:\Projets visual studio\Git\GigHub\GigHub\obj\Debug\GigHub.Migrations.AddForeignKeyPropertiesToGog.resources
-F:\Projets visual studio\Git\GigHub\GigHub\obj\Debug\GigHub.csprojAssemblyReference.cache
 F:\Projets visual studio\Git\GigHub\GigHub\obj\Debug\GigHub.Migrations.AddNameToApplicationUser.resources
+F:\Projets visual studio\Git\GigHub\GigHub\obj\Debug\GigHub.Migrations.AddAttendance.resources
+F:\Projets visual studio\Git\GigHub\GigHub\bin\System.Net.Http.Formatting.dll
+F:\Projets visual studio\Git\GigHub\GigHub\bin\System.Web.Http.dll
+F:\Projets visual studio\Git\GigHub\GigHub\bin\System.Web.Http.WebHost.dll
+F:\Projets visual studio\Git\GigHub\GigHub\bin\System.Net.Http.Formatting.xml
+F:\Projets visual studio\Git\GigHub\GigHub\bin\System.Web.Http.xml
+F:\Projets visual studio\Git\GigHub\GigHub\bin\System.Web.Http.WebHost.xml
+F:\Projets visual studio\Git\GigHub\GigHub\obj\Debug\GigHub.Migrations.AddFollowing.resources
+F:\Projets visual studio\Git\GigHub\GigHub\obj\Debug\GigHub.csprojAssemblyReference.cache
