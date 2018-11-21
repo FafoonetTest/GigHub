@@ -358,4 +358,3 @@ F:\Projets visual studio\Git\GigHub\GigHub\bin\System.Net.Http.Formatting.xml
 F:\Projets visual studio\Git\GigHub\GigHub\bin\System.Web.Http.xml
 F:\Projets visual studio\Git\GigHub\GigHub\bin\System.Web.Http.WebHost.xml
 F:\Projets visual studio\Git\GigHub\GigHub\obj\Debug\GigHub.Migrations.AddFollowing.resources
-F:\Projets visual studio\Git\GigHub\GigHub\obj\Debug\GigHub.csprojAssemblyReference.cache
