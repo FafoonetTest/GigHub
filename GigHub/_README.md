@@ -44,6 +44,10 @@ EXTENSIONS
     Productivity power tools 2017
     web essentials
     zencoding
+    bootbox : messages d'alerte : sur bootboxjx.com, télécharger, copier le fichier bootbox.min.js dans le dossier scripts et l'inclure dans le projet
+        dans app_start ajouter au bundle bootstrap
+        copier un exemple sur le site bootbox selon le message : confirm, alert...
+
 EXPRESSION TREES (ARBORESCENCE D'EXPRESSION)
 voir GigFormViewModel.cs, méthode get de la propriété Action
 cours Become a full-stack .NET developer advanced topics
