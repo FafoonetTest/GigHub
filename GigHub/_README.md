@@ -44,3 +44,7 @@ EXTENSIONS
     Productivity power tools 2017
     web essentials
     zencoding
+EXPRESSION TREES (ARBORESCENCE D'EXPRESSION)
+voir GigFormViewModel.cs, méthode get de la propriété Action
+cours Become a full-stack .NET developer advanced topics
+Basic CRUD : Implementig the Update / using Expressions to replace magic strings
