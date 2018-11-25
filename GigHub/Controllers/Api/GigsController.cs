@@ -1,56 +1,33 @@
-﻿using GigHub.Models;
+﻿using GigHub.Repositories;
 using Microsoft.AspNet.Identity;
-using System;
-using System.Linq;
 using System.Web.Http;
 
 namespace GigHub.Controllers.Api
 {
-    [Authorize]
+    [System.Web.Http.Authorize]
     public class GigsController : ApiController
     {
-        private ApplicationDbContext _context;
+        private GigRepository _gigRepository;
 
         public GigsController()
         {
-            _context = new ApplicationDbContext();
+            _gigRepository = new GigRepository();
         }
 
-        [HttpDelete]
+        [System.Web.Http.HttpDelete]
         public IHttpActionResult Cancel(int id)
         {
-            var userId = User.Identity.GetUserId();
+            var gig = _gigRepository.GetGigWithAttendees(id);
 
-            var gig = _context.Gigs.Single(g => g.Id == id && g.ArtistId == userId);
-
-            if (gig.IsCanceled)
+            if (gig == null || gig.IsCanceled)
                 return NotFound();
 
-            gig.IsCanceled = true;
+            if (gig.ArtistId != User.Identity.GetUserId())
+                return Unauthorized();
 
-            var notification = new Notification
-            {
-                DateTime = DateTime.Now,
-                Gig = gig,
-                Type = NotificationType.GigCanceled
-            };
-
-            var attendees = _context.Attendances
-                .Where(a => a.GigId == gig.Id)
-                .Select(a => a.Attendee)
-                .ToList();
-
-            foreach (var attendee in attendees)
-            {
-                var userNotification = new UserNotification
-                {
-                    User = attendee,
-                    Notification = notification
-                };
-                _context.UserNotifications.Add(userNotification);
-            }
-
-            _context.SaveChanges();
+            gig.Cancel();
+            
+            _gigRepository.Complete();
 
             return Ok();
         }

@@ -359,5 +359,9 @@ F:\Projets visual studio\Git\GigHub\GigHub\bin\System.Web.Http.xml
 F:\Projets visual studio\Git\GigHub\GigHub\bin\System.Web.Http.WebHost.xml
 F:\Projets visual studio\Git\GigHub\GigHub\obj\Debug\GigHub.Migrations.AddFollowing.resources
 F:\Projets visual studio\Git\GigHub\GigHub\obj\Debug\GigHub.Migrations.AddIsCanceledToGig.resources
-F:\Projets visual studio\Git\GigHub\GigHub\obj\Debug\GigHub.csprojAssemblyReference.cache
 F:\Projets visual studio\Git\GigHub\GigHub\obj\Debug\GigHub.Migrations.AddNotifications.resources
+F:\Projets visual studio\Git\GigHub\GigHub\bin\AutoMapper.dll
+F:\Projets visual studio\Git\GigHub\GigHub\bin\System.ValueTuple.dll
+F:\Projets visual studio\Git\GigHub\GigHub\bin\AutoMapper.xml
+F:\Projets visual studio\Git\GigHub\GigHub\bin\System.ValueTuple.xml
+F:\Projets visual studio\Git\GigHub\GigHub\obj\Debug\GigHub.csprojAssemblyReference.cache

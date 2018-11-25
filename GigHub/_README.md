@@ -47,6 +47,12 @@ EXTENSIONS
     bootbox : messages d'alerte : sur bootboxjx.com, télécharger, copier le fichier bootbox.min.js dans le dossier scripts et l'inclure dans le projet
         dans app_start ajouter au bundle bootstrap
         copier un exemple sur le site bootbox selon le message : confirm, alert...
+    Automapper (mapping de propriétés pour les dtomodels)
+    Animate.css https://daneden.github.io/animate.css/
+    Underscorejs https://underscorejs.org/ 
+    MomentJs https://momentjs.com/ gestion de l'affichage des dates/heures
+    css to less converter https://jsonformatter.org/css-to-less
+    requirejs : organisation des fichiers js https://requirejs.org/
 
 EXPRESSION TREES (ARBORESCENCE D'EXPRESSION)
 voir GigFormViewModel.cs, méthode get de la propriété Action

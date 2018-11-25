@@ -1,7 +1,5 @@
-﻿using GigHub.Dtos;
-using GigHub.Models;
+﻿using GigHub.Repositories;
 using Microsoft.AspNet.Identity;
-using System.Linq;
 using System.Web.Mvc;
 
 namespace GigHub.Controllers
@@ -9,21 +7,17 @@ namespace GigHub.Controllers
     [System.Web.Http.Authorize]
     public class FolloweesController : Controller
     {
-        private ApplicationDbContext _context;
+        private FollowingRepository _followingRepository;
 
         public FolloweesController()
         {
-            _context = new ApplicationDbContext(); 
+            _followingRepository = new FollowingRepository();
         }
 
         [System.Web.Http.HttpPost]
         public ActionResult Index()
         {
-            var userId = User.Identity.GetUserId();
-            var artists = _context.Followings
-                .Where(f => f.FollowerId == userId)
-                .Select(f => f.Followee)
-                .ToList();
+            var artists = _followingRepository.GetFollowers(User.Identity.GetUserId());
 
             return View(artists);
         }

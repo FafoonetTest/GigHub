@@ -1,7 +1,7 @@
 ﻿using GigHub.Dtos;
 using GigHub.Models;
+using GigHub.Repositories;
 using Microsoft.AspNet.Identity;
-using System.Linq;
 using System.Web.Http;
 
 namespace GigHub.Controllers.Api
@@ -9,11 +9,11 @@ namespace GigHub.Controllers.Api
     [Authorize]
     public class AttendancesController : ApiController
     {
-        private readonly ApplicationDbContext _context;
+        private readonly AttendanceRepository _attendanceRepository;
 
         public AttendancesController()
         {
-            _context = new ApplicationDbContext();
+            _attendanceRepository = new AttendanceRepository();
         }
 
         [HttpPost]
@@ -21,7 +21,7 @@ namespace GigHub.Controllers.Api
         {
             var userId = User.Identity.GetUserId();
 
-            if (_context.Attendances.Any(x => x.GigId == dto.GigId && x.AttendeeId == userId))
+            if (_attendanceRepository.IsGigAttendant(dto.GigId, userId))
                 return BadRequest("Attendance already exists.");
 
             var attendance = new Attendance
@@ -29,10 +29,19 @@ namespace GigHub.Controllers.Api
                 GigId = dto.GigId,
                 AttendeeId = userId
             };
-            _context.Attendances.Add(attendance);
-            _context.SaveChanges();
+
+            _attendanceRepository.Create(attendance);
 
             return Ok();
+        }
+
+        [HttpDelete]
+        public IHttpActionResult DeleteAttendance(int id)
+        {
+            if (!_attendanceRepository.RemoveByGigAndAttendee(id, User.Identity.GetUserId()))
+                return NotFound();
+            
+            return Ok(id);
         }
     }
 }
